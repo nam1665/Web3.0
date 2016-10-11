@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TechKids Hot Girls</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/handlebars.js"></script>
+    <script src="libs/masonry.pkgd.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+
+    <!-- handlebars template -->
+    <script id="girl_item_template" type="text/x-handlebars-template">
+      {{#each this}}
+
+      <!-- girl item -->
+      <div class="col-sm-6 col-md-3 girl_item">
+        <div class="girl_image_container">
+          <img src="{{imageUrl}}" class="img-responsive girl_image">
+          <div class="girl_image_overlay"  data-toggle="modal" data-target='#{{id}}'>
+            <button class="plus_button">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+            <div class="girl_image_info text-center">
+              <div class="row">
+                <div class="col-xs-4">
+                  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  <p>{{view}}</p>
+                </div>
+                <div class="col-xs-4">
+                  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                  <p>{{date}}</p>
+                </div>
+                <div class="col-xs-4">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  <p>{{plus}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="girl_info_container">
+          <div class="col-xs-12">
+            <img src="{{posterAvatar}}" class="img-circle img-responsive poster_avatar">
+            <h4>{{posterName}}</h4>
+            <p><small>{{posterTitle}}</small></p>
+          </div>
+          <div class="col-xs-12">
+            {{content}}
+          </div>
+        </div>
+      </div>
+
+      <!-- modal dialog -->
+
+      <div class="modal fade" tabindex="-1" role="dialog" id={{id}}>
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-body">
+              <div class="header_modal text-center">
+                <div class="row">
+                  <div class="col-xs-6">
+                     <button class="plus_button_modal">
+                      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                    <p>{{view}}</p>
+                  </div>
+                  <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                    <p>{{date}}</p>
+                  </div>
+                  <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    <p>{{plus}}</p>
+                  </div>
+                </div>
+              </div>
+              <img src="{{imageUrl}}" class="img-responsive girl_item_modal">
+              <div class="girl_info_modal">
+                <div class="col-xs-12">
+                  <img src="{{posterAvatar}}" class="img-circle img-responsive avatar_modal">
+                  <h1>{{posterName}}</h1>
+                  <p>{{posterTitle}}</p>
+                </div>
+                <div class="col-xs-12">
+                  {{content}}
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <div class="girl_comment_modal">
+                <img src="{{posterAvatar}}" class="img-circle img-responsive avatar_comment_modal">
+                  <h4>{{posterName}}</h4>
+                  <p>
+                    {{content}}
+                  </p>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {{/each}}
+    </script>
+
+
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <input type="text" placeholder="Enter your search..." class="form-control header_search">
+            <span class="glyphicon glyphicon-search header_search_icon" aria-hidden="true"></span>
+          </div>
+          <div class="col-sm-6 text-center header_logo">
+            <img src="img/Logo.png">
+            <span>HOT GIRLS</span>
+          </div>
+          <div class="col-sm-3">
+            <div class="header_user_profile">
+              <button class="header_user_profile_button">
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+              </button>
+              <button class="header_user_profile_button">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+              </button>
+              Bach Le
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section>
+      <div class="container">
+        <div class="row" id="girl_item_container">
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 endline">
+          </div>
+          <div class="col-sm-2 3_dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+          <div class="col-sm-5 endline_2">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </body>
+</html>

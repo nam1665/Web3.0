@@ -1,0 +1,295 @@
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+body{
+  background: #dedede;
+  padding-top: 65px;
+}
+
+.header {
+  padding: 16px 0 13px 0;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1051;
+}
+
+.header_search:focus {
+  border-radius: 0;
+  border: 1px solid #ececec;
+  padding-right: 28px;
+  box-shadow: none;
+}
+
+.header_search_icon {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0.5;
+}
+
+.header_logo {
+  color: #00a0c6;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.header_logo * {
+  vertical-align: middle;
+}
+
+.header_user_profile {
+  border: 1px solid #ececec;
+  height: 34px;
+  line-height: 34px;
+  color: #c5c5c5;
+}
+
+.header_user_profile_button {
+  border: 0 none;
+  border-right: 1px solid #ececec;
+  background: #ffffff;
+  color: #c5c5c5;
+  float: left;
+  height: 100%;
+  width: 34px;
+}
+
+.header_user_profile_button:hover {
+  background: #00a0c6;
+  color: #ffffff;
+}
+
+.header_user_profile_button:last-of-type {
+  margin-right: 7px;
+}
+
+.girl_item{
+  margin-top: 15px;
+}
+
+.girl_image_container{
+  position: relative;
+}
+
+.girl_image{
+  width: 100%;
+}
+
+.girl_image_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.girl_image_container:hover .girl_image_overlay{
+  display: block;
+}
+
+.girl_image_info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.plus_button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  border: 0 none;
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.plus_button:hover {
+  background: rgba(255,255,255, 0.8);
+  color: #000000;
+}
+
+.girl_info_container{
+  background: #ffffff;
+  padding: 15px 0;
+  overflow: auto;
+}
+
+.poster_avatar{
+  width: 42px;
+  height: 42px;
+  float: left;
+  margin-right: 10px;
+}
+
+.girl_info_container h4{
+  margin: 0;
+}
+
+.girl_info_container small{
+  color: #8a8a8a;
+}
+
+
+@media screen and (max-width: 768px){
+  .header{
+    position: static;
+  }
+
+  body{
+    padding: 0;
+  }
+}
+
+.modal-dialog {
+  margin-top: 78px;
+}
+
+.modal-content {
+  border-radius: 20px;
+}
+
+.modal-body {
+  overflow:auto;
+}
+
+.header_modal {
+  color: #8a8a8a;
+}
+.plus_button_modal {
+  width: 40px;
+  height: 40px;
+  float: left;
+  background: #ffffff;
+  border: none;
+}
+
+.plus_button_modal:hover {
+  cursor: pointer;
+  background: rgba(255,255,255, 0.8);
+  color: #000000;
+}
+
+.girl_item_modal {
+  width: 100%
+}
+
+.girl_info_modal{
+  background: #ffffff;
+  padding: 25px 0 0 0;
+}
+
+.avatar_modal{
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.girl_info_modal p{
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  color: #8a8a8a;
+}
+
+.modal-footer {
+  text-align: left;
+}
+
+.girl_comment_modal{
+  background: #ffffff;
+  overflow: auto;
+}
+
+.girl_comment_modal h4{
+  margin: 0;
+  padding: 0 none;
+  margin-top: 8px;
+}
+
+.girl_comment_modal p{
+  margin-left: 50px;
+}
+
+.avatar_comment_modal {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.footer {
+  margin-top: 150px;
+  text-align: center;
+  padding: 10px;
+}
+
+.endline {
+  margin-top: 4px;
+  border-style: solid;
+  color: #a1a1a1;
+  border-width: 0.5px;
+  left: 14px;
+}
+
+.endline_2 {
+  display: inline-block;
+  margin-top: 4px;
+  border-style: solid;
+  color: #a1a1a1;
+  border-width: 0.5px;
+  right: 14px;
+}
+
+
+.dot {
+    margin-top: -20px;
+    display: inline-block;
+    color: #a1a1a1;
+    background: #CCCCCC;
+    height: 20px;
+    width: 20px;
+    border-radius: 24px;
+    margin-right: 10px;
+}
+
+
+@keyframes flash {
+    from  {
+        background: #707070;
+    }
+    to {
+        background: #CCCCCC;
+    }
+}
+
+.dot {
+    animation-name: flash;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 500ms;
+}
+.dot:nth-child(3) {
+    animation-delay: 1000ms;
+}

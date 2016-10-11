@@ -1,0 +1,196 @@
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+body{
+  background: #dedede;
+  padding-top: 65px;
+}
+
+.header {
+  padding: 16px 0 13px 0;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1051;
+}
+
+.header_search:focus {
+  border-radius: 0;
+  border: 1px solid #ececec;
+  padding-right: 28px;
+  box-shadow: none;
+}
+
+.header_search_icon {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0.5;
+}
+
+.header_logo {
+  color: #00a0c6;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.header_logo * {
+  vertical-align: middle;
+}
+
+.header_user_profile {
+  border: 1px solid #ececec;
+  height: 34px;
+  line-height: 34px;
+  color: #c5c5c5;
+}
+
+.header_user_profile_button {
+  border: 0 none;
+  border-right: 1px solid #ececec;
+  background: #ffffff;
+  color: #c5c5c5;
+  float: left;
+  height: 100%;
+  width: 34px;
+}
+
+.header_user_profile_button:hover {
+  background: #00a0c6;
+  color: #ffffff;
+}
+
+.header_user_profile_button:last-of-type {
+  margin-right: 7px;
+}
+
+.girl_item{
+  margin-top: 15px;
+}
+
+.girl_image_container{
+  position: relative;
+}
+
+.girl_image{
+  width: 100%;
+}
+
+.girl_image_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  color: #ffffff;
+}
+
+.girl_image_container:hover .girl_image_overlay{
+  display: block;
+}
+
+.girl_image_info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.plus_button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  border: 0 none;
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.plus_button:hover {
+  background: rgba(255,255,255, 0.8);
+  color: #000000;
+}
+
+.girl_info_container{
+  background: #ffffff;
+  padding: 15px 0;
+  overflow: auto;
+}
+
+.poster_avatar{
+  width: 42px;
+  height: 42px;
+  float: left;
+  margin-right: 10px;
+}
+
+.girl_info_container h4{
+  margin: 0;
+}
+
+.girl_info_container small{
+  color: #8a8a8a;
+}
+
+
+@media screen and (max-width: 768px){
+  .header{
+    position: static;
+  }
+
+  body{
+    padding: 0;
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  margin-top: 80px;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+.girl_info_modal {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  right: 5px;
+  top: 10;:
+}
+
+.girl_info_modal_box {
+  margin-top: 20px;
+}
+
+.modal-footer {
+  text-align: left;
+}
+
+.poster_avatar_modal {
+  width: 84px;
+  height: 84px;
+  float: left;
+  margin-right: 10px;
+}
+
+.text {
+  margin-top: 40px;
+}
